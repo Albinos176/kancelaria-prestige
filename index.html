@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kancelaria Księgowa Prestige Anna Wagner – profesjonalna obsługa księgowa, kadry i płace, doradztwo podatkowe. Pełna księgowość dla wszystkich firm">
+    <meta name="keywords" content="kancelaria księgowa, biuro rachunkowe, księgowość, kadry płace, doradztwo podatkowe, Anna Wagner, Łomianki">
+    <meta property="og:title" content="Kancelaria Księgowa Prestige – Anna Wagner">
+    <meta property="og:description" content="Profesjonalna obsługa księgowa dla Twojej firmy. Pełna księgowość, KPiR, kadry i płace, doradztwo podatkowe.">
+    <meta property="og:type" content="website">
+    <title>Kancelaria Księgowa Prestige – Anna Wagner</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== TOP BAR ===================== -->
+    <div class="topbar" id="topbar">
+        <div class="topbar__container container">
+            <div class="topbar__contact">
+                <a href="tel:+48604508336" class="topbar__item">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+48 604 508 336</span>
+                </a>
+                <a href="mailto:biuro@kancelariaprestige.pl" class="topbar__item">
+                    <i class="fas fa-envelope"></i>
+                    <span>biuro@kancelariaprestige.pl</span>
+                </a>
+                <span class="topbar__item topbar__item--address">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>ul. Łużycka 9/12, 05-092 Łomianki</span>
+                </span>
+            </div>
+            <div class="topbar__social">
+                <a href="#" aria-label="Facebook" class="topbar__social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="LinkedIn" class="topbar__social-link"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== HEADER / NAV ===================== -->
+    <header class="header" id="header">
+        <div class="header__container container">
+            <a href="#start" class="header__logo">
+                <img src="assets/img/logo.png" alt="Kancelaria Księgowa Prestige – Anna Wagner" class="header__logo-img">
+                <div class="header__logo-text">
+                    <span class="header__logo-name">Kancelaria Księgowa Prestige</span>
+                    <span class="header__logo-sub">Anna Wagner</span>
+                </div>
+            </a>
+
+            <nav class="nav" id="nav" aria-label="Nawigacja główna">
+                <ul class="nav__list" id="navList">
+                    <li class="nav__item"><a href="#start" class="nav__link active">Start</a></li>
+                    <li class="nav__item"><a href="#o-nas" class="nav__link">O Kancelarii</a></li>
+                    <li class="nav__item"><a href="#oferta" class="nav__link">Oferta</a></li>
+                    <li class="nav__item"><a href="#cennik" class="nav__link">Cennik</a></li>
+                    <li class="nav__item"><a href="#kontakt" class="nav__link">Kontakt</a></li>
+                </ul>
+            </nav>
+
+            <a href="#kontakt" class="btn btn--primary header__cta">Umów konsultację</a>
+
+            <button class="hamburger" id="hamburger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="navList">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="start">
+        <div class="hero__bg"></div>
+        <div class="hero__overlay"></div>
+        <div class="container hero__container">
+            <div class="hero__content" data-animate="fade-up">
+                <span class="hero__eyebrow">Kancelaria Księgowa Prestige</span>
+                <h1 class="hero__title">Twoje finanse<br>w prestiżowych rękach</h1>
+                <p class="hero__subtitle">Profesjonalna obsługa księgowa, kadrowa i doradcza dla firm każdej wielkości. Działamy stacjonarnie i online – z pełnym zaangażowaniem i dyskrecją.</p>
+                <div class="hero__actions">
+                    <a href="#kontakt" class="btn btn--gold btn--lg">
+                        <i class="fas fa-calendar-check"></i>
+                        Umów konsultację
+                    </a>
+                    <a href="#oferta" class="btn btn--outline-light btn--lg">
+                        <i class="fas fa-arrow-down"></i>
+                        Poznaj ofertę
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">18+</span>
+                        <span class="hero__stat-label">Lat doświadczenia</span>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">50+</span>
+                        <span class="hero__stat-label">Obsługiwanych firm</span>
+                    </div>
+                    <div class="hero__stat-divider"></div>
+                    <div class="hero__stat">
+                        <span class="hero__stat-number">100%</span>
+                        <span class="hero__stat-label">Terminowości</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero__scroll-indicator">
+            <span>Przewiń</span>
+            <div class="hero__scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ===================== O NAS ===================== -->
+    <section class="about section" id="o-nas">
+        <div class="container">
+            <div class="about__grid">
+                <div class="about__image-col" data-animate="fade-right">
+                    <div class="about__image-wrapper">
+                        <div class="about__image-frame">
+                            <div class="about__image-placeholder">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                        </div>
+                        <div class="about__badge">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <strong>Certyfikowana</strong>
+                                <span>Księgowa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about__content" data-animate="fade-left">
+                    <div class="section__label">O Kancelarii</div>
+                    <h2 class="section__title">Doświadczenie i&nbsp;prestiż<br>w&nbsp;służbie Twojego biznesu</h2>
+                    <div class="about__divider"></div>
+                    <p class="about__text">Kancelaria Księgowa Prestige to miejsce, gdzie profesjonalizm spotyka się z indywidualnym podejściem do każdego klienta. Założona przez <strong>Annę Wagner</strong> – certyfikowanego doradcę podatkowego z ponad 18-letnim doświadczeniem – kancelaria oferuje kompleksową obsługę finansową dla firm z sektora MŚP.</p>
+                    <p class="about__text">Naszą misją jest nie tylko prowadzenie ksiąg rachunkowych, ale przede wszystkim bycie partnerem biznesowym, który pomaga podejmować trafne decyzje finansowe. Działamy z pełną dyskrecją, terminowością i zaangażowaniem, które wyróżnia nas na tle standardowych biur rachunkowych.</p>
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <strong>Pełne bezpieczeństwo</strong>
+                                <span>Ubezpieczenie OC i poufność danych</span>
+                            </div>
+                        </div>
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <div>
+                                <strong>Dedykowany opiekun</strong>
+                                <span>Jeden kontakt dla całej obsługi</span>
+                            </div>
+                        </div>
+                        <div class="about__feature">
+                            <div class="about__feature-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <div>
+                                <strong>Obsługa online</strong>
+                                <span>Nowoczesne narzędzia i e-dokumenty</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#kontakt" class="btn btn--primary">Poznaj nas bliżej</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== OFERTA ===================== -->
+    <section class="services section section--alt" id="oferta">
+        <div class="container">
+            <div class="section__header" data-animate="fade-up">
+                <div class="section__label">Nasza Oferta</div>
+                <h2 class="section__title">Wszystko, czego potrzebuje<br>Twoja firma</h2>
+                <p class="section__subtitle">Świadczymy kompleksowe usługi księgowo-kadrowe dostosowane do specyfiki każdej działalności.</p>
+            </div>
+
+            <div class="services__grid">
+
+                <div class="service-card" data-animate="fade-up" data-delay="0">
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3 class="service-card__title">Pełna Księgowość</h3>
+                    <p class="service-card__text">Prowadzenie ksiąg rachunkowych zgodnie z ustawą o rachunkowości. Sporządzanie sprawozdań finansowych, bilansów i rachunków wyników.</p>
+                    <ul class="service-card__list">
+                        <li><i class="fas fa-check"></i> Księgi handlowe (KH)</li>
+                        <li><i class="fas fa-check"></i> Sprawozdania finansowe</li>
+                        <li><i class="fas fa-check"></i> Deklaracje podatkowe</li>
+                    </ul>
+                    <a href="#kontakt" class="service-card__link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="service-card__title">KPiR i Ryczałt</h3>
+                    <p class="service-card__text">Prowadzenie Księgi Przychodów i Rozchodów oraz ewidencji ryczałtu ewidencjonowanego dla jednoosobowych działalności i spółek osobowych.</p>
+                    <ul class="service-card__list">
+                        <li><i class="fas fa-check"></i> Księga Przychodów i Rozchodów</li>
+                        <li><i class="fas fa-check"></i> Ryczałt ewidencjonowany</li>
+                        <li><i class="fas fa-check"></i> Rozliczenia VAT i PIT</li>
+                    </ul>
+                    <a href="#kontakt" class="service-card__link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="200">
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="service-card__title">Kadry i Płace</h3>
+                    <p class="service-card__text">Kompleksowa obsługa kadrowo-płacowa: umowy o pracę, listy płac, ZUS, PPK. Pełna dokumentacja pracownicza i rozliczenia z urzędami.</p>
+                    <ul class="service-card__list">
+                        <li><i class="fas fa-check"></i> Listy płac i umowy</li>
+                        <li><i class="fas fa-check"></i> Rozliczenia ZUS i PPK</li>
+                        <li><i class="fas fa-check"></i> Dokumentacja kadrowa</li>
+                    </ul>
+                    <a href="#kontakt" class="service-card__link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-card__title">Doradztwo Podatkowe</h3>
+                    <p class="service-card__text">Optymalizacja podatkowa, planowanie finansowe i bieżące doradztwo w zakresie prawa podatkowego. Reprezentacja przed urzędami skarbowymi.</p>
+                    <ul class="service-card__list">
+                        <li><i class="fas fa-check"></i> Optymalizacja podatkowa</li>
+                        <li><i class="fas fa-check"></i> Planowanie finansowe</li>
+                        <li><i class="fas fa-check"></i> Reprezentacja przed US</li>
+                    </ul>
+                    <a href="#kontakt" class="service-card__link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-card__icon-wrap">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="service-card__title">Zakładanie Firm</h3>
+                    <p class="service-card__text">Pomoc w rejestracji działalności gospodarczej, spółek i fundacji. Doradztwo przy wyborze formy prawnej i optymalnej formy opodatkowania.</p>
+                    <ul class="service-card__list">
+                        <li><i class="fas fa-check"></i> Rejestracja w KRS i CEIDG</li>
+                        <li><i class="fas fa-check"></i> Wybór formy prawnej</li>
+                        <li><i class="fas fa-check"></i> Doradztwo startowe</li>
+                    </ul>
+                    <a href="#kontakt" class="service-card__link">Dowiedz się więcej <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card service-card--cta" data-animate="fade-up" data-delay="500">
+                    <div class="service-card__cta-content">
+                        <i class="fas fa-phone-alt service-card__cta-icon"></i>
+                        <h3>Zadzwoń po bezpłatną konsultację</h3>
+                        <p>Omówimy Twoje potrzeby i dobierzemy najlepsze rozwiązanie dla Twojej firmy.</p>
+                        <a href="tel:+48604508336" class="btn btn--gold">
+                            <i class="fas fa-phone-alt"></i>
+                            +48 604 508 336
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TRUST SIGNALS ===================== -->
+    <section class="trust section" id="zaufanie">
+        <div class="container">
+            <div class="section__header" data-animate="fade-up">
+                <div class="section__label">Dlaczego My</div>
+                <h2 class="section__title">Fundamenty naszej współpracy</h2>
+            </div>
+            <div class="trust__grid">
+                <div class="trust-item" data-animate="fade-up" data-delay="0">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="trust-item__title">Licencja i Certyfikaty</h3>
+                    <p class="trust-item__text">Anna Wagner posiada licencję doradcy podatkowego oraz certyfikat Ministerstwa Finansów do usługowego prowadzenia ksiąg rachunkowych.</p>
+                </div>
+                <div class="trust-item" data-animate="fade-up" data-delay="150">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="trust-item__title">Ubezpieczenie OC</h3>
+                    <p class="trust-item__text">Posiadamy obowiązkowe ubezpieczenie odpowiedzialności cywilnej, które chroni Cię przed ewentualnymi błędami. Twoje finanse są w pełni zabezpieczone.</p>
+                </div>
+                <div class="trust-item" data-animate="fade-up" data-delay="300">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="trust-item__title">Indywidualne Podejście</h3>
+                    <p class="trust-item__text">Każdy klient otrzymuje dedykowanego opiekuna i spersonalizowane rozwiązania. Nie jesteś numerem – jesteś partnerem biznesowym.</p>
+                </div>
+                <div class="trust-item" data-animate="fade-up" data-delay="450">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="trust-item__title">Terminowość i Rzetelność</h3>
+                    <p class="trust-item__text">Gwarantujemy terminowe składanie deklaracji i sprawozdań. Żadnych kar, żadnych opóźnień – Twoja firma działa bez zakłóceń.</p>
+                </div>
+                <div class="trust-item" data-animate="fade-up" data-delay="600">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="trust-item__title">Poufność Danych</h3>
+                    <p class="trust-item__text">Wszystkie dane są przetwarzane zgodnie z RODO. Stosujemy najwyższe standardy bezpieczeństwa informacji i tajemnicę zawodową.</p>
+                </div>
+                <div class="trust-item" data-animate="fade-up" data-delay="750">
+                    <div class="trust-item__icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="trust-item__title">Stały Kontakt</h3>
+                    <p class="trust-item__text">Jesteśmy dostępni dla Ciebie na bieżąco – telefonicznie, mailowo i przez nowoczesne platformy do wymiany dokumentów.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CENNIK ===================== -->
+    <section class="pricing section section--alt" id="cennik">
+        <div class="container">
+            <div class="section__header" data-animate="fade-up">
+                <div class="section__label">Cennik</div>
+                <h2 class="section__title">Przejrzyste i uczciwe ceny</h2>
+                <p class="section__subtitle">Ceny ustalamy indywidualnie w zależności od specyfiki i skali działalności. Poniżej orientacyjne widełki cenowe.</p>
+            </div>
+            <div class="pricing__grid">
+                <div class="pricing-card" data-animate="fade-up" data-delay="0">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__name">KPiR / Ryczałt</h3>
+                        <div class="pricing-card__price">
+                            <span class="pricing-card__from">od</span>
+                            <span class="pricing-card__amount">250</span>
+                            <span class="pricing-card__currency">zł/mies.</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> Prowadzenie KPiR lub ryczałtu</li>
+                        <li><i class="fas fa-check"></i> Deklaracje VAT, PIT</li>
+                        <li><i class="fas fa-check"></i> Rozliczenia ZUS właściciela</li>
+                        <li><i class="fas fa-check"></i> Bieżące doradztwo</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn--outline-primary">Zapytaj o wycenę</a>
+                </div>
+                <div class="pricing-card pricing-card--featured" data-animate="fade-up" data-delay="150">
+                    <div class="pricing-card__badge">Najpopularniejszy</div>
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__name">Pełna Księgowość</h3>
+                        <div class="pricing-card__price">
+                            <span class="pricing-card__from">od</span>
+                            <span class="pricing-card__amount">800</span>
+                            <span class="pricing-card__currency">zł/mies.</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> Prowadzenie ksiąg handlowych</li>
+                        <li><i class="fas fa-check"></i> Sprawozdania finansowe</li>
+                        <li><i class="fas fa-check"></i> Deklaracje CIT, VAT</li>
+                        <li><i class="fas fa-check"></i> Dedykowany opiekun</li>
+                        <li><i class="fas fa-check"></i> Priorytetowy kontakt</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn--gold">Zapytaj o wycenę</a>
+                </div>
+                <div class="pricing-card" data-animate="fade-up" data-delay="300">
+                    <div class="pricing-card__header">
+                        <h3 class="pricing-card__name">Kadry i Płace</h3>
+                        <div class="pricing-card__price">
+                            <span class="pricing-card__from">od</span>
+                            <span class="pricing-card__amount">80</span>
+                            <span class="pricing-card__currency">zł/os.</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-card__features">
+                        <li><i class="fas fa-check"></i> Listy płac</li>
+                        <li><i class="fas fa-check"></i> Umowy o pracę i zlecenie</li>
+                        <li><i class="fas fa-check"></i> Rozliczenia ZUS, PPK</li>
+                        <li><i class="fas fa-check"></i> Dokumentacja kadrowa</li>
+                    </ul>
+                    <a href="#kontakt" class="btn btn--outline-primary">Zapytaj o wycenę</a>
+                </div>
+            </div>
+            <p class="pricing__note" data-animate="fade-up">* Ostateczna cena ustalana jest indywidualnie po analizie potrzeb klienta. Skontaktuj się z nami, aby otrzymać bezpłatną wycenę.</p>
+        </div>
+    </section>
+
+    <!-- ===================== KONTAKT / FOOTER ===================== -->
+    <section class="contact-section section" id="kontakt">
+        <div class="container">
+            <div class="section__header" data-animate="fade-up">
+                <div class="section__label">Kontakt</div>
+                <h2 class="section__title">Porozmawiajmy o Twojej firmie</h2>
+                <p class="section__subtitle">Pierwsza konsultacja jest bezpłatna. Skontaktuj się z nami i sprawdź, jak możemy pomóc.</p>
+            </div>
+            <div class="contact__grid">
+                <div class="contact__info" data-animate="fade-right">
+                    <div class="contact__info-card">
+                        <h3 class="contact__info-title">Dane kontaktowe</h3>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class="fas fa-phone-alt"></i></div>
+                            <div>
+                                <strong>Telefon</strong>
+                                <a href="tel:+48604508336">+48 604 508 336</a>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <strong>E-mail</strong>
+                                <a href="mailto:biuro@kancelariaprestige.pl">biuro@kancelariaprestige.pl</a>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Adres</strong>
+                                <span>ul. Łużycka 9/12<br>05-092 Łomianki</span>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <strong>Dodatkowy adres</strong>
+                                <span>ul. Jana Pawła II 7/9<br>09-140 Raciąż</span>
+                            </div>
+                        </div>
+                        <div class="contact__detail">
+                            <div class="contact__detail-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <strong>Godziny pracy</strong>
+                                <span>Pon–Pt: 8:00–17:00</span>
+                            </div>
+                        </div>
+                        <div class="contact__map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2440.5!2d20.8870!3d52.3370!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecb2e2e2e2e2e%3A0x1!2su%C5%82.%20%C5%81u%C5%BCycka%209%2C%20%C5%81omianki!5e0!3m2!1spl!2spl!4v1700000000001!5m2!1spl!2spl"
+                                width="100%" height="200" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade" title="Mapa – Kancelaria Prestige"></iframe>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__form-wrap" data-animate="fade-left">
+                    <form class="contact-form" id="contactForm" action="php/contact.php" method="POST" novalidate>
+                        <h3 class="contact-form__title">Wyślij wiadomość</h3>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Imię i Nazwisko *</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Jan Kowalski" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Adres e-mail *</label>
+                                <input type="email" id="email" name="email" class="form-input" placeholder="jan@firma.pl" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Telefon</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" placeholder="+48 604 508 336">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service" class="form-label">Interesująca usługa</label>
+                            <select id="service" name="service" class="form-input form-select">
+                                <option value="">-- Wybierz usługę --</option>
+                                <option value="pelna-ksiegowosc">Pełna Księgowość</option>
+                                <option value="kpir">KPiR / Ryczałt</option>
+                                <option value="kadry-place">Kadry i Płace</option>
+                                <option value="doradztwo">Doradztwo Podatkowe</option>
+                                <option value="inne">Inne</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Wiadomość *</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Opisz krótko swoją sytuację lub zadaj pytanie..." required></textarea>
+                        </div>
+                        <div class="form-group form-group--checkbox">
+                            <label class="form-checkbox">
+                                <input type="checkbox" name="rodo" id="rodo" required>
+                                <span class="form-checkbox__box"></span>
+                                <span class="form-checkbox__label">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie, zgodnie z <a href="#" class="form-link">Polityką Prywatności</a>. *</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Wyślij wiadomość
+                        </button>
+                        <div class="form-message" id="formMessage" role="alert" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="footer__main">
+            <div class="container footer__grid">
+                <div class="footer__brand">
+                    <img src="assets/img/logo.png" alt="Kancelaria Księgowa Prestige" class="footer__logo">
+                    <p class="footer__tagline">Twoje finanse w prestiżowych rękach. Profesjonalna obsługa księgowa dla firm każdej wielkości.</p>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="footer__social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Usługi</h4>
+                    <ul class="footer__links">
+                        <li><a href="#oferta">Pełna Księgowość</a></li>
+                        <li><a href="#oferta">KPiR i Ryczałt</a></li>
+                        <li><a href="#oferta">Kadry i Płace</a></li>
+                        <li><a href="#oferta">Doradztwo Podatkowe</a></li>
+                        <li><a href="#oferta">Zakładanie Firm</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Kancelaria</h4>
+                    <ul class="footer__links">
+                        <li><a href="#o-nas">O Kancelarii</a></li>
+                        <li><a href="#cennik">Cennik</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                        <li><a href="#">Polityka Prywatności</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__col-title">Kontakt</h4>
+                    <ul class="footer__contact-list">
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+48604508336">+48 604 508 336</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:biuro@kancelariaprestige.pl">biuro@kancelariaprestige.pl</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i><span>ul. Łużycka 9/12<br>05-092 Łomianki</span></li>
+                        <li><i class="fas fa-clock"></i><span>Pon–Pt: 8:00–17:00</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <div class="container footer__bottom-inner">
+                <p>&copy; <span id="currentYear"></span> Kancelaria Księgowa Prestige – Anna Wagner. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Wróć na górę">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
