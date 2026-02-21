@@ -1827,6 +1827,7 @@ select {
 @media (max-width: 768px) {
   :root {
     --container-px: 1.25rem;
+    --header-h: 64px;
   }
 
   .section {
@@ -1836,6 +1837,22 @@ select {
   /* Topbar */
   .topbar__contact {
     gap: 1rem;
+  }
+
+  /* Logo – shrink text so it doesn't overflow on mobile */
+  .header__logo-img {
+    height: 46px;
+  }
+
+  .header__logo-name {
+    font-size: 0.82rem;
+    white-space: normal;
+    max-width: 160px;
+    line-height: 1.15;
+  }
+
+  .header__logo-sub {
+    font-size: 0.65rem;
   }
 
   /* Header */
@@ -1911,6 +1928,17 @@ select {
     grid-template-columns: 1fr;
   }
 
+  /* Pricing – single column on mobile */
+  .pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+
+  .pricing-card--featured {
+    transform: none;
+  }
+
   /* Form */
   .form-row {
     grid-template-columns: 1fr;
@@ -1948,12 +1976,32 @@ select {
     gap: 0.75rem;
   }
 
-  .topbar__item span {
+  /* Na bardzo malych ekranach: ukryj email, zostaw tylko telefon + ikony */
+  .topbar__item:nth-child(2) {
     display: none;
   }
 
+  .topbar__item span {
+    font-size: 0.7rem;
+  }
+
   .topbar__item i {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
+  }
+
+  /* Logo na min ekranach */
+  .header__logo-img {
+    height: 40px;
+  }
+
+  .header__logo-name {
+    font-size: 0.72rem;
+    max-width: 140px;
+  }
+
+  .header__logo-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
   }
 
   .hero__actions {
@@ -1978,6 +2026,12 @@ select {
   .about__badge {
     right: 0;
     bottom: -1rem;
+  }
+
+  /* Kontakt – mniejszy padding na karcie */
+  .contact__info-card,
+  .contact-form {
+    padding: 1.5rem;
   }
 }
 
