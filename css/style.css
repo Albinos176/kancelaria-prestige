@@ -91,6 +91,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -1884,11 +1885,11 @@ select {
   }
 
   .about__image-frame {
-    aspect-ratio: 4/5;
+    min-height: 420px;
   }
 
   .about__photo {
-    object-position: center top;
+    object-position: 50% 5%;
   }
 
   .services__grid {
