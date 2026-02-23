@@ -369,7 +369,9 @@ select {
 .header {
   position: sticky;
   top: 0;
-  z-index: 999;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background: #EAECDF;
   height: var(--header-h);
   display: flex;
@@ -378,6 +380,9 @@ select {
   transition:
     box-shadow var(--transition-base),
     background var(--transition-base);
+  /* Fix for mobile clipping/rendering bugs */
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
 }
 
 .header.scrolled {
@@ -515,7 +520,7 @@ select {
   align-items: center;
   justify-content: center;
   transition: background var(--transition-fast);
-  z-index: 10;
+  z-index: 2000;
   flex-shrink: 0;
 }
 
@@ -1885,11 +1890,12 @@ select {
   }
 
   .about__image-frame {
-    min-height: 420px;
+    min-height: 600px;
+    aspect-ratio: auto;
   }
 
   .about__photo {
-    object-position: 50% 5%;
+    object-position: 50% 12%;
   }
 
   .services__grid {
@@ -1986,7 +1992,7 @@ select {
     width: min(320px, 85vw);
     height: 100vh;
     background: #EAECDF;
-    z-index: 999;
+    z-index: 2000;
     padding: 6rem 2rem 2rem;
     transition: right var(--transition-base);
     box-shadow: -4px 0 30px rgba(0, 0, 0, 0.15);
@@ -2000,6 +2006,7 @@ select {
   .nav-overlay {
     display: block;
     pointer-events: none;
+    z-index: 1999;
   }
 
   .nav-overlay.active {
