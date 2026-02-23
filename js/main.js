@@ -109,6 +109,11 @@
     });
   }
 
+  const navClose = document.getElementById("navClose");
+  if (navClose) {
+    navClose.addEventListener("click", closeNav);
+  }
+
   if (navOverlay) {
     navOverlay.addEventListener("click", closeNav);
   }
