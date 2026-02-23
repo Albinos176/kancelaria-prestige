@@ -501,26 +501,26 @@ select {
   position: absolute;
   top: 1rem;
   right: 1rem;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  border: 2px solid var(--color-primary);
-  background: var(--color-primary);
-  font-size: 1.8rem;
+  width: 40px;
+  height: 40px;
+  padding: 4px;
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  font-size: 1.75rem;
   line-height: 1;
   cursor: pointer;
-  color: var(--color-white);
+  color: var(--color-primary);
   align-items: center;
   justify-content: center;
-  transition: all var(--transition-fast);
+  transition: background var(--transition-fast);
   z-index: 10;
   flex-shrink: 0;
 }
 
 .nav__close:hover {
-  background: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
-  color: var(--color-gold-light);
+  background: rgba(123, 26, 46, 0.08);
+  color: var(--color-primary);
 }
 
 .header__cta {
@@ -1879,12 +1879,16 @@ select {
   }
 
   .about__image-col {
-    max-width: 400px;
+    max-width: 450px;
     margin-inline: auto;
   }
 
   .about__image-frame {
-    aspect-ratio: 3/2;
+    aspect-ratio: 4/3;
+  }
+
+  .about__photo {
+    object-position: center top;
   }
 
   .services__grid {
