@@ -1917,9 +1917,15 @@ select {
     gap: 3rem;
   }
 
+  /* Zapobiega rozszerzaniu layoutu poza viewport przez absolutne elementy */
+  .about {
+    overflow: hidden;
+  }
+
   .about__image-col {
     max-width: 420px;
     margin-inline: auto;
+    overflow: hidden;
   }
 
   /* Badge: nie wystawaj poza prawa krawedz na mobile */
