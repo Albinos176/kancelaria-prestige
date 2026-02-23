@@ -1922,6 +1922,12 @@ select {
     margin-inline: auto;
   }
 
+  /* Badge: nie wystawaj poza prawa krawedz na mobile */
+  .about__badge {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
   .about__image-frame {
     min-height: 420px;
   }
