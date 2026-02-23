@@ -1879,12 +1879,12 @@ select {
   }
 
   .about__image-col {
-    max-width: 450px;
+    max-width: 420px;
     margin-inline: auto;
   }
 
   .about__image-frame {
-    aspect-ratio: 4/3;
+    aspect-ratio: 4/5;
   }
 
   .about__photo {
