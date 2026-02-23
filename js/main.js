@@ -341,6 +341,14 @@
     });
   }
 
+  const privacyLinkFooter = document.getElementById("privacyLinkFooter");
+  if (privacyLinkFooter) {
+    privacyLinkFooter.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
   if (modalClose)   modalClose.addEventListener("click",   closeModal);
   if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
 

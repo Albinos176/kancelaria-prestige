@@ -1395,6 +1395,12 @@ select {
   gap: 1rem;
 }
 
+.pricing__extra-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
 .pricing__extra-item i {
   color: var(--color-gold);
   font-size: 1.25rem;
@@ -2045,11 +2051,19 @@ select {
 
   /* Extras grid – 1 kolumna na mobile */
   .pricing__extras-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Pricing grid 6-card – reset na mobile */
+  .pricing__grid--6 {
+    grid-template-columns: 1fr !important;
+    max-width: 420px;
+    margin-inline: auto;
   }
 
   .pricing__extras {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    overflow: hidden;
   }
 
   .pricing-card--featured {
@@ -2156,7 +2170,7 @@ select {
    19. MODAL – POLITYKA PRYWATNOŚCI
    ============================================================ */
 .modal {
-  display: none;
+  display: none !important;
   visibility: hidden;
   position: fixed;
   inset: 0;
@@ -2167,7 +2181,7 @@ select {
 }
 
 .modal.is-open {
-  display: flex;
+  display: flex !important;
   visibility: visible;
   pointer-events: all;
 }
