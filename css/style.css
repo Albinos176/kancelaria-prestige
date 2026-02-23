@@ -1878,13 +1878,19 @@ select {
     --header-h: 70px;
   }
 
-  /* Naprawia przycinanie headera przez stacking contexts sekcji na mobile */
+  /* Header: sticky z wysokim z-index */
   .header {
     position: sticky;
     top: 0;
     z-index: 9999;
-    isolation: isolate;
-    transform: translateZ(0);
+  }
+
+  /* Wyłącz animacje scroll na mobile – eliminuje translateX/Y overflow i stacking context issues */
+  [data-animate],
+  [data-animate].animated {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 
   /* background-attachment:fixed + transform = buguje stacking na iOS/Android */
