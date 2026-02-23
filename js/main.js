@@ -310,6 +310,42 @@
   });
 
   /* ============================================================
+       PRIVACY POLICY MODAL
+    ============================================================ */
+  const privacyLink  = document.getElementById("privacyLink");
+  const privacyModal = document.getElementById("privacyModal");
+  const modalClose   = document.getElementById("modalClose");
+  const modalOverlay = document.getElementById("modalOverlay");
+
+  function openModal() {
+    if (!privacyModal) return;
+    privacyModal.classList.add("is-open");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal() {
+    if (!privacyModal) return;
+    privacyModal.classList.remove("is-open");
+    document.body.style.overflow = "";
+  }
+
+  if (privacyLink) {
+    privacyLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  if (modalClose)   modalClose.addEventListener("click",   closeModal);
+  if (modalOverlay) modalOverlay.addEventListener("click", closeModal);
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && privacyModal?.classList.contains("is-open")) {
+      closeModal();
+    }
+  });
+
+  /* ============================================================
        INIT
     ============================================================ */
   handleScroll();
