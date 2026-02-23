@@ -103,6 +103,10 @@ body {
   overflow-x: hidden;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -1874,21 +1878,16 @@ select {
     --header-h: 70px;
   }
 
-  /* Naprawia przycinanie sticky headera przez stacking contexts na mobile */
+  /* Naprawia przycinanie headera przez stacking contexts sekcji na mobile */
   .header {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    right: 0;
     z-index: 9999;
+    isolation: isolate;
+    transform: translateZ(0);
   }
 
-  /* Wyrównuje treść pod fixed header (topbar + header) */
-  body {
-    padding-top: calc(var(--topbar-h) + var(--header-h));
-  }
-
-  /* background-attachment:fixed + transform = buguje z-index na iOS/Android */
+  /* background-attachment:fixed + transform = buguje stacking na iOS/Android */
   .hero__bg {
     background-attachment: scroll;
     transform: none;
