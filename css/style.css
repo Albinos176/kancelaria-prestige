@@ -2279,6 +2279,39 @@ select {
   font-style: italic;
 }
 
+/* Modal – mobile responsive */
+@media (max-width: 600px) {
+  .modal__box {
+    width: calc(100% - 1rem);
+    max-height: 92vh;
+    border-radius: var(--radius-md);
+  }
+
+  .modal__title {
+    font-size: var(--fs-xl);
+    padding: 1.25rem 1.25rem 1rem;
+    padding-right: 3rem; /* miejsce na przycisk X */
+  }
+
+  .modal__close {
+    top: 0.85rem;
+    right: 0.85rem;
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .modal__content {
+    padding: 1rem 1.25rem 1.5rem;
+    font-size: var(--fs-xs);
+  }
+
+  .modal__content h3 {
+    font-size: var(--fs-sm);
+    margin-top: 1.25rem;
+  }
+}
+
 /* ============================================================
    20. PRINT STYLES
    ============================================================ */
