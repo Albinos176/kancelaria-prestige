@@ -1878,11 +1878,19 @@ select {
     --header-h: 70px;
   }
 
-  /* Header: sticky z wysokim z-index */
+  /* Header: fixed - zawsze na gorze ekranu */
   .header {
-    position: sticky;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 9999;
+  }
+
+  /* Odsun tresc od gory o wysokosc headera */
+  body {
+    padding-top: var(--header-h);
   }
 
   /* Wyłącz animacje scroll na mobile – eliminuje translateX/Y overflow i stacking context issues */
