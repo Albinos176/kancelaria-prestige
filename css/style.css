@@ -602,7 +602,7 @@ select {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1920&q=80");
+  background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1280&q=65");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
