@@ -10,6 +10,8 @@
     <meta property="og:type" content="website">
     <title>Kancelaria Księgowa Prestige – Anna Wagner</title>
 
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/img/logo.webp" as="image" fetchpriority="high">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,7 +54,7 @@
     <header class="header" id="header">
         <div class="header__container container">
             <a href="#start" class="header__logo">
-                <img src="assets/img/logo.png" alt="Kancelaria Księgowa Prestige – Anna Wagner" class="header__logo-img" width="180" height="58">
+                <img src="assets/img/logo.webp" alt="Kancelaria Księgowa Prestige – Anna Wagner" class="header__logo-img" width="180" height="58" fetchpriority="high" loading="eager">
                 <div class="header__logo-text">
                     <span class="header__logo-name">Kancelaria Księgowa Prestige</span>
                     <span class="header__logo-sub">Anna Wagner</span>
@@ -600,7 +602,7 @@
         <div class="footer__main">
             <div class="container footer__grid">
                 <div class="footer__brand">
-                    <img src="assets/img/logo.png" alt="Kancelaria Księgowa Prestige" class="footer__logo" loading="lazy" width="150" height="48">
+                    <img src="assets/img/logo.webp" alt="Kancelaria Księgowa Prestige" class="footer__logo" loading="lazy" width="150" height="48">
                     <p class="footer__tagline">Twoje finanse w profesjonalnych rękach. Profesjonalna obsługa księgowa dla firm każdej wielkości.</p>
                     <div class="footer__social">
                         <a href="https://www.facebook.com/p/Kancelaria-Ksi%C4%99gowa-PRESTIGE-Anna-Wagner-100063639908496/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="footer__social-link"><i class="fab fa-facebook-f"></i></a>
