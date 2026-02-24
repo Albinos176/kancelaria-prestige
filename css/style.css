@@ -779,13 +779,8 @@ select {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: left 15%;
   display: block;
-  transition: transform var(--transition-slow);
-}
-
-.about__image-wrapper:hover .about__photo {
-  transform: scale(1.05);
 }
 
 .about__image-frame::before {
@@ -793,11 +788,10 @@ select {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0) 60%,
-    rgba(0, 0, 0, 0.4) 100%
+    135deg,
+    rgba(184, 150, 46, 0.15) 0%,
+    transparent 60%
   );
-  z-index: 1;
 }
 
 .about__image-placeholder {
@@ -817,27 +811,24 @@ select {
 .about__image-frame::after {
   content: "";
   position: absolute;
-  inset: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  inset: 16px;
+  border: 1px solid rgba(184, 150, 46, 0.3);
   border-radius: calc(var(--radius-lg) - 4px);
   pointer-events: none;
-  z-index: 2;
 }
 
 .about__badge {
   position: absolute;
-  bottom: 2rem;
-  right: -2rem;
+  bottom: -1.5rem;
+  right: -1.5rem;
   background: var(--color-white);
   border-radius: var(--radius-md);
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(184, 150, 46, 0.1);
-  z-index: 10;
-  max-width: 240px;
+  gap: 0.75rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--color-border);
 }
 
 .about__badge i {
