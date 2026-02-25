@@ -74,6 +74,9 @@
   --topbar-h: 40px;
   --container-w: 1200px;
   --container-px: 1.5rem;
+
+  /* Kolor tła nagłówka – używana w header i mobile nav */
+  --color-header-bg: #EAECDF;
 }
 
 /* ============================================================
@@ -103,9 +106,6 @@ body {
   overflow-x: clip;
 }
 
-html {
-  overflow-x: clip;
-}
 
 img {
   max-width: 100%;
@@ -373,7 +373,7 @@ select {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #EAECDF;
+  background: var(--color-header-bg);
   height: var(--header-h);
   display: flex;
   align-items: center;
@@ -385,7 +385,7 @@ select {
 
 .header.scrolled {
   box-shadow: var(--shadow-md);
-  background: #EAECDF;
+  background: var(--color-header-bg);
 }
 
 .header__container {
@@ -407,22 +407,6 @@ select {
 
 .header__logo-img {
     height: 58px;
-    width: auto;
-    display: block;
-    object-fit: contain;
-}
-
-/* Sygnet (ikona) – wyświetlamy tylko górną część logo jako osobny plik */
-.header__logo-icon {
-    flex-shrink: 0;
-    height: 52px;
-    width: auto;
-    display: flex;
-    align-items: center;
-}
-
-.header__logo-signet {
-    height: 52px;
     width: auto;
     display: block;
     object-fit: contain;
@@ -602,13 +586,12 @@ select {
 .hero__bg {
   position: absolute;
   inset: 0;
-  background-image: url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1280&q=65");
+  background-image: url("../assets/img/photo-1450101499163-c8848c66ca85.jfif");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   transform: scale(1.05);
   transition: transform 8s ease;
-  will-change: transform;
 }
 
 .hero.loaded .hero__bg {
@@ -798,19 +781,6 @@ select {
     rgba(0, 0, 0, 0.4) 100%
   );
   z-index: 1;
-}
-
-.about__image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.about__image-placeholder i {
-  font-size: 6rem;
-  color: rgba(184, 150, 46, 0.4);
 }
 
 /* Decorative frame border */
@@ -1517,6 +1487,21 @@ select {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Kontener o stałym aspect-ratio zapobiega CLS podczas ładowania iframe-a */
+.contact__map-ratio {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+}
+
+.contact__map-ratio iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 /* Contact Form */
 .contact-form {
   background: var(--color-white);
@@ -1673,6 +1658,39 @@ select {
   border: 1px solid rgba(123, 26, 46, 0.2);
 }
 
+/* Inline feedback pod polem (email) */
+.form-field-hint {
+  display: block;
+  font-size: var(--fs-xs);
+  margin-top: 0.35rem;
+  line-height: 1.4;
+  min-height: 1em;
+  transition: color var(--transition-fast);
+}
+
+.form-field-hint--ok {
+  color: #3a8a3a;
+}
+
+.form-field-hint--err {
+  color: var(--color-primary);
+}
+
+/* Licznik znaków dla textarea */
+.form-char-counter {
+  display: block;
+  text-align: right;
+  font-size: var(--fs-xs);
+  color: var(--color-text-light);
+  margin-top: 0.35rem;
+  transition: color var(--transition-fast);
+}
+
+.form-char-counter--warn {
+  color: var(--color-gold-dark);
+  font-weight: var(--fw-medium);
+}
+
 /* ============================================================
    13. FOOTER
    ============================================================ */
@@ -1807,14 +1825,6 @@ select {
   color: rgba(255, 255, 255, 0.4);
 }
 
-.footer__bottom-link {
-  color: var(--color-gold);
-  transition: color var(--transition-fast);
-}
-
-.footer__bottom-link:hover {
-  color: var(--color-gold-light);
-}
 
 /* ============================================================
    14. BACK TO TOP
@@ -2046,7 +2056,7 @@ select {
     right: -100%;
     width: min(320px, 85vw);
     height: 100vh;
-    background: #EAECDF;
+    background: var(--color-header-bg);
     z-index: 999;
     padding: 6rem 2rem 2rem;
     transition: right var(--transition-base);
@@ -2397,7 +2407,34 @@ select {
 }
 
 /* ============================================================
-   20. PRINT STYLES
+   20. PREFERS-REDUCED-MOTION
+   Dla użytkowników systemowych ustawień "Zmniejsz ruch": wyłączamy
+   wszystkie przejścia i animacje CSS.
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .hero__bg {
+    transform: none;
+    transition: none;
+  }
+
+  [data-animate] {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   21. PRINT STYLES
    ============================================================ */
 @media print {
   .topbar,

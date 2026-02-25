@@ -359,6 +359,139 @@
   });
 
   /* ============================================================
+       INPUT MASKS & INLINE VALIDATION
+    ============================================================ */
+
+  // --- 1. MASKA TELEFONU: +48 XXX XXX XXX ---
+  const phoneInput = document.getElementById("phone");
+  if (phoneInput) {
+    // Formatuje ciąg cyfr → +48 XXX XXX XXX
+    function formatPhone(digits) {
+      // Usuń wszystko co nie jest cyfrą
+      digits = digits.replace(/\D/g, "");
+
+      // Jeśli zaczyna się od 48, pomijamy prefix (dodamy go sami)
+      if (digits.startsWith("48")) {
+        digits = digits.slice(2);
+      }
+      // Zostaw maksymalnie 9 cyfr (PL numer bez kierunkowego)
+      digits = digits.slice(0, 9);
+
+      let formatted = "+48";
+      if (digits.length > 0) formatted += " " + digits.slice(0, 3);
+      if (digits.length > 3) formatted += " " + digits.slice(3, 6);
+      if (digits.length > 6) formatted += " " + digits.slice(6, 9);
+      return formatted;
+    }
+
+    phoneInput.addEventListener("input", function () {
+      const caret = this.selectionStart;
+      const prevLen = this.value.length;
+      this.value = formatPhone(this.value);
+      // Koryguj pozycję kursora po formatowaniu
+      const diff = this.value.length - prevLen;
+      this.setSelectionRange(caret + diff, caret + diff);
+    });
+
+    // Przy focusie: jeśli pole puste, ustaw prefix
+    phoneInput.addEventListener("focus", function () {
+      if (!this.value) {
+        this.value = "+48 ";
+        this.setSelectionRange(4, 4);
+      }
+    });
+
+    // Przy blur: jeśli tylko prefix — wyczyść
+    phoneInput.addEventListener("blur", function () {
+      if (this.value.trim() === "+48" || this.value.trim() === "+48 ") {
+        this.value = "";
+      }
+      // Walidacja długości: numer musi mieć 9 cyfr
+      if (this.value && this.value.replace(/\D/g, "").replace(/^48/, "").length < 9 && this.value.replace(/\D/g, "").replace(/^48/, "").length > 0) {
+        this.style.borderColor = "var(--color-gold-dark)";
+        this.title = "Numer powinien mieć 9 cyfr (bez kierunkowego)";
+      } else {
+        this.style.borderColor = "";
+        this.title = "";
+      }
+    });
+
+    // Nie pozwól wpisać liter (oprócz + na początku)
+    phoneInput.addEventListener("keypress", function (e) {
+      if (!/[\d+\s]/.test(e.key) && !e.ctrlKey && !e.metaKey) {
+        e.preventDefault();
+      }
+    });
+  }
+
+  // --- 2. MASKA IMIENIA I NAZWISKA: tylko litery + spacja + myślnik ---
+  const nameInput = document.getElementById("name");
+  if (nameInput) {
+    nameInput.addEventListener("input", function () {
+      // Usuń niedozwolone znaki (liczby, symbole oprócz - i spacji)
+      const clean = this.value.replace(/[^a-zA-ZąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s\-']/g, "");
+      if (this.value !== clean) this.value = clean;
+    });
+
+    // Auto-kapitalizacja pierwszej litery każdego słowa po blur
+    nameInput.addEventListener("blur", function () {
+      this.value = this.value
+        .trim()
+        .replace(/\s+/g, " ")
+        .replace(/\b\p{L}/gu, (c) => c.toUpperCase());
+    });
+  }
+
+  // --- 3. EMAIL – inline feedback ---
+  const emailInput = document.getElementById("email");
+  if (emailInput) {
+    const emailFeedback = document.createElement("span");
+    emailFeedback.className = "form-field-hint";
+    emailInput.parentNode.appendChild(emailFeedback);
+
+    emailInput.addEventListener("blur", function () {
+      const val = this.value.trim();
+      if (!val) {
+        emailFeedback.textContent = "";
+        this.style.borderColor = "";
+        return;
+      }
+      if (isValidEmail(val)) {
+        emailFeedback.textContent = "✓ Poprawny adres e-mail";
+        emailFeedback.className = "form-field-hint form-field-hint--ok";
+        this.style.borderColor = "#3a8a3a";
+      } else {
+        emailFeedback.textContent = "✗ Nieprawidłowy format adresu e-mail";
+        emailFeedback.className = "form-field-hint form-field-hint--err";
+        this.style.borderColor = "var(--color-primary)";
+      }
+    });
+
+    emailInput.addEventListener("focus", function () {
+      emailFeedback.textContent = "";
+      this.style.borderColor = "";
+    });
+  }
+
+  // --- 4. TEXTAREA – licznik znaków ---
+  const messageInput = document.getElementById("message");
+  if (messageInput) {
+    const MAX_CHARS = 1000;
+    messageInput.setAttribute("maxlength", MAX_CHARS);
+
+    const counter = document.createElement("span");
+    counter.className = "form-char-counter";
+    counter.textContent = `0 / ${MAX_CHARS}`;
+    messageInput.parentNode.appendChild(counter);
+
+    messageInput.addEventListener("input", function () {
+      const len = this.value.length;
+      counter.textContent = `${len} / ${MAX_CHARS}`;
+      counter.classList.toggle("form-char-counter--warn", len > MAX_CHARS * 0.85);
+    });
+  }
+
+  /* ============================================================
        INIT
     ============================================================ */
   handleScroll();
