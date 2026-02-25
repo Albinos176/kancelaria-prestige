@@ -2026,7 +2026,8 @@ select {
   }
 
   .header__logo-sub {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: var(--fw-semi);
   }
 
   /* Header */
@@ -2195,8 +2196,9 @@ select {
   }
 
   .header__logo-sub {
-    font-size: 0.6rem;
-    letter-spacing: 0.1em;
+    font-size: 0.7rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: 0.12em;
   }
 
   .hero__actions {
