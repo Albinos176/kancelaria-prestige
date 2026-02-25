@@ -2019,15 +2019,16 @@ select {
   }
 
   .header__logo-name {
-    font-size: 0.82rem;
+    font-size: 1.1rem;
+    font-weight: var(--fw-bold);
     white-space: normal;
-    max-width: 160px;
+    max-width: 250px;
     line-height: 1.15;
   }
 
   .header__logo-sub {
-    font-size: 0.75rem;
-    font-weight: var(--fw-semi);
+    font-size: 1.0rem;
+    font-weight: var(--fw-bold);
   }
 
   /* Header */
@@ -2191,12 +2192,13 @@ select {
   }
 
   .header__logo-name {
-    font-size: 0.72rem;
-    max-width: 140px;
+    font-size: 0.95rem;
+    font-weight: var(--fw-bold);
+    max-width: 220px;
   }
 
   .header__logo-sub {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     font-weight: var(--fw-bold);
     letter-spacing: 0.12em;
   }
